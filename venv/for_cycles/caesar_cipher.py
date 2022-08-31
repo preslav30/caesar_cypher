@@ -4,8 +4,8 @@ alphabet = string.ascii_lowercase
 action = input("Type 'encrypt' to encrypt, type 'decrypt' to decrypt:\n")
 text = input("Type your message:\n").lower()
 key = int(input("Type the shift number:\n"))
-# go_again = input("Do you want to go again? Type \"yes\" or \"no\": ")
 stop_loop = False
+
 def caesar_cipher(beginning_text, key, direction):
     result = ""
     for letter in beginning_text:
@@ -23,8 +23,8 @@ def caesar_cipher(beginning_text, key, direction):
 
 while stop_loop == False:
     caesar_cipher(beginning_text=text, key=key, direction=action)
-
     go_again = input("\nDo you want to go again? Type 'yes' or 'no':\n")
+    
     if go_again == "yes":
         action = input("\nType 'encrypt' to encrypt, type 'decrypt' to decrypt:\n")
         text = input("Type your message:\n").lower()
